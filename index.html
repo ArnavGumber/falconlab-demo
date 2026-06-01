@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Demo by FalconLabs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="https://falconlab.in/icon.png">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="brand">
+        <img src="icon.png" alt="FalconLabs Logo" class="brand-logo" />
+        <div>
+          <p class="brand-label">FalconLabs</p>
+          <p class="brand-subtitle">Website Demo</p>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#carousel">Screenshots</a>
+        <a href="#demos">Demos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">Digital solutions for institutions</span>
+          <h1>Website Demo by FalconLabs</h1>
+          <p>Explore modern landing pages, educational webapps, testing systems, and LMS experiences built for schools, coaching centers, and campus learning.</p>
+          <div class="hero-actions">
+            <a href="#demos" class="btn btn-primary">Explore demos</a>
+            <a href="#contact" class="btn btn-secondary">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <div class="hero-card">
+            <div class="hero-tag">Future-ready experience</div>
+            <div class="hero-panel">
+              <h2>Institutional web solutions</h2>
+              <p>Built with performance, accessibility, and visual impact for the next generation of educational brands.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="carousel" class="carousel-section">
+        <div class="section-header">
+          <p class="eyebrow">Visual tour</p>
+          <h2>Screenshot carousel</h2>
+        </div>
+        <div class="carousel-container">
+          <button class="carousel-btn prev-btn" aria-label="Previous slide">‹</button>
+          <div class="carousel-track">
+            <article class="carousel-item active">
+              <div class="carousel-image image-school"></div>
+              <div class="carousel-copy">
+                <h3>School Landing Page</h3>
+                <p>A sleek and bright homepage made to welcome parents, students, and faculty with trust and clarity.</p>
+              </div>
+            </article>
+            <article class="carousel-item">
+              <div class="carousel-image image-coaching"></div>
+              <div class="carousel-copy">
+                <h3>Coaching Landing Page</h3>
+                <p>A conversion-focused design tailored for coaching centers with program highlights and student success stories.</p>
+              </div>
+            </article>
+            <article class="carousel-item">
+              <div class="carousel-image image-testing"></div>
+              <div class="carousel-copy">
+                <h3>JEE / CUET Replica Testing</h3>
+                <p>Simulated exam environment for serious test practice, analytics, and instant performance feedback.</p>
+              </div>
+            </article>
+            <article class="carousel-item">
+              <div class="carousel-image image-lms"></div>
+              <div class="carousel-copy">
+                <h3>Learning Management System</h3>
+                <p>A polished LMS interface for onboarding classes, tracking progress, and delivering lessons online.</p>
+              </div>
+            </article>
+          </div>
+          <button class="carousel-btn next-btn" aria-label="Next slide">›</button>
+        </div>
+      </section>
+
+      <section id="works" class="cards-section">
+        <div class="section-header" id="demos">
+          <p class="eyebrow">Featured demos</p>
+          <h2>Ready-made educational experiences</h2>
+        </div>
+        <div class="cards-grid">
+          <article class="feature-card">
+            <img class="card-img multi-img" src="./demo-img/school-lp-1.png" alt="School landing preview" data-images='["./demo-img/school-lp-1.png","./demo-img/school-lp-2.png","./demo-img/school-lp-3.png","./demo-img/school-lp-4.png"]' />
+            <div class="card-content">
+              <h3>School Landing Page</h3>
+              <p>Optimized for trust and clarity, this landing page highlights academic excellence and admission flow.</p>
+              <a href="./demos/school-landing-page/index.html" class="card-btn">See live demo</a>
+            </div>
+          </article>
+          <article class="feature-card">
+            <img class="card-img multi-img" src="./demo-img/coaching-lp-1.png" alt="Coaching landing preview"  data-images='["./demo-img/coaching-lp-1.png","./demo-img/coaching-lp-2.png","./demo-img/coaching-lp-3.png","./demo-img/coaching-lp-4.png"]' />
+            <div class="card-content">
+              <h3>Coaching Landing Page</h3>
+              <p>Designed to attract aspirants, showcase programs, and convert visitors into loyal learners.</p>
+              <a href="./demos/coaching-landing-page/index.html" class="card-btn">See live demo</a>
+            </div>
+          </article>
+          <article class="feature-card">
+            <img class="card-img multi-img" src="./demo-img/test-system-1.png" alt="Testing system preview" data-images='["./demo-img/test-system-1.png","./demo-img/test-system-2.png","./demo-img/test-system-3.png"]' />
+            <div class="card-content">
+              <h3>JEE / CUET Replica Testing</h3>
+              <p>A realistic exam simulation platform built for practice tests, timed mocks, and confidence building.</p>
+              <a href="#" class="card-btn">See live demo</a>
+            </div>
+          </article>
+          <article class="feature-card">
+            <img class="card-img multi-img" src="" alt="LMS preview" data-images='["","",""]' />
+            <div class="card-content">
+              <h3>Learning Management System (Coming Soon)</h3>
+              <p>Modern LMS design for course management, student dashboards, and interactive lesson delivery.</p>
+              <a href="#" class="card-btn">See live demo</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="footer-cta">
+        <div>
+          <p class="eyebrow">Launch your demo</p>
+          <h2>Get a custom education website built with FalconLabs.</h2>
+        </div>
+        <a href="tel:+917986724443" class="btn btn-primary">Contact us</a>
+      </section>
+    </main>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
