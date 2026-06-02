@@ -15,6 +15,27 @@ const nextSlide = () => {
   showSlide(activeIndex);
 };
 
+const navToggle = document.querySelector('.mobile-nav-toggle');
+const siteHeader = document.querySelector('.site-header');
+const nav = document.querySelector('.nav');
+
+if (navToggle && siteHeader && nav) {
+  navToggle.addEventListener('click', () => {
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!expanded));
+    siteHeader.classList.toggle('nav-open');
+  });
+
+  nav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (siteHeader.classList.contains('nav-open')) {
+        siteHeader.classList.remove('nav-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+}
+
 const prevSlide = () => {
   activeIndex = (activeIndex - 1 + slides.length) % slides.length;
   showSlide(activeIndex);

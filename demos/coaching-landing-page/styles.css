@@ -67,6 +67,147 @@ a {
   color: #334155;
 }
 
+.mobile-nav-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0.35rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mobile-nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 0.18rem;
+  border-radius: 999px;
+  background: #0f172a;
+  margin: 0.25rem 0;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.site-header.nav-open .nav {
+  display: flex;
+}
+
+@media (max-width: 870px) {
+  .header-inner {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .mobile-nav-toggle {
+    display: inline-flex;
+  }
+
+  .nav {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding: 0 1rem;
+    border-radius: 1.25rem;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 24px 45px rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: scaleY(0.97);
+    transform-origin: top;
+    transition: max-height 0.32s ease, opacity 0.32s ease, transform 0.32s ease;
+  }
+
+  .site-header.nav-open .nav {
+    max-height: 1000px;
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  .nav a {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border-radius: 999px;
+    background: #f8fafc;
+  }
+
+  .site-header .btn-primary {
+    display: none;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .site-header.nav-open .btn-primary {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 820px) {
+  .cards-grid,
+  .plan-grid,
+  .testimonial-grid,
+  .team-grid,
+  .stats-grid,
+  .why-grid,
+  .info-grid,
+  .contact-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .hero-copy {
+    padding: 2rem 1.25rem;
+  }
+
+  .hero {
+    min-height: 100vh;
+  }
+
+  .testimonial-card,
+  .teacher-card,
+  .card,
+  .stat-card,
+  .plan-card {
+    min-height: unset;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.25rem, 7vw, 3rem);
+  }
+}
+
+@media (max-width: 580px) {
+  .header-inner {
+    gap: 0.75rem;
+  }
+
+  .hero-copy {
+    padding: 1.5rem 1rem;
+  }
+
+  .hero-actions,
+  .footer-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
 .hero {
   position: relative;
   min-height: 88vh;
@@ -522,6 +663,11 @@ a {
 @media (max-width: 980px) {
   .cards-grid,
   .team-grid,
+  .plan-grid,
+  .testimonial-grid,
+  .stats-grid,
+  .info-grid,
+  .contact-grid,
   .why-grid {
     grid-template-columns: 1fr;
   }
@@ -538,8 +684,9 @@ a {
 
 @media (max-width: 720px) {
   .header-inner {
-    flex-direction: column;
-    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .nav {
